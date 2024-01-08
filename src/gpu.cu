@@ -25,6 +25,7 @@
  * of the code.
  */
 #include <cstdio>
+#include <iostream>
 #include <iomanip>
 #include <iostream>
 
@@ -90,7 +91,15 @@ const char *cusparseGetErrorString(cusparseStatus_t error) {
 
   case CUSPARSE_STATUS_MATRIX_TYPE_NOT_SUPPORTED:
     return "CUSPARSE_STATUS_MATRIX_TYPE_NOT_SUPPORTED";
+
+  case CUSPARSE_STATUS_NOT_SUPPORTED:
+    return "CUSPARSE_STATUS_NOT_SUPPORTED";
+  
+  case CUSPARSE_STATUS_INSUFFICIENT_RESOURCES:
+    return "CUSPARSE_STATUS_INSUFFICIENT_RESOURCES";
   }
+
+  std::cout << "ERROR code: " << error << ". \n";
 
   return "<unknown>";
 }

@@ -31,6 +31,9 @@
 #include "broadcast_kernel.cuh"
 #include "math_functions.cuh"
 
+#include <thrust/execution_policy.h>
+#include <thrust/sort.h>
+
 namespace minkowski {
 
 namespace detail {

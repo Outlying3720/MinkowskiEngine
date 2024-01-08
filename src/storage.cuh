@@ -30,6 +30,8 @@
 
 #include <vector>
 
+#include <thrust/execution_policy.h>
+
 namespace minkowski {
 
 template <typename Dtype, typename ByteAllocator> class gpu_storage {
